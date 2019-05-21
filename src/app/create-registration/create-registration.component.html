@@ -1,0 +1,15 @@
+<h3>Dar Entrada</h3>
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">placa</label>
+            <input type="text" class="form-control" id="plate" required [(ngModel)]="registration.domainVehiclePlate" name="plate">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Tipo de Vehículo</label>
+            <input type="text" class="form-control" id="type" required [(ngModel)]="registration.domainVehicleType" name="type">
+        </div>
+        <button type="submit" class="btn btn-success">Registrar</button>
+    </form>
+</div>

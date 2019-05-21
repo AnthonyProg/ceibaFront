@@ -1,0 +1,6 @@
+{
+  "/registration": {
+    "target": "http://localhost:8080/checkin",
+    "secure": false
+  }
+}

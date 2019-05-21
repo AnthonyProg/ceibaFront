@@ -10,23 +10,21 @@ import { Vehicle } from '../vehicle';
 })
 export class CreateRegistrationComponent implements OnInit {
 
-  registration: Registration = new Registration();
-  submitted = false;
+  registration: Registration;
+  domainVehicleType : Vehicle;
+  submitted : boolean;
 
   constructor(private registrationService: RegistrationService) { }
 
   ngOnInit() {
-  }
-
-  newEmployee(): void {
-    this.submitted = false;
     this.registration = new Registration();
+    this.domainVehicleType = new Vehicle()
+    this.registration.domainVehicleType = this.domainVehicleType;
   }
 
   save() {
     this.registrationService.createRegistration(this.registration)
-      .subscribe(data => console.log(data), error => console.log(error));
-    this.registration = new Registration();
+      .subscribe(data => console.log(data), error => console.log(error));    
   }
 
   onSubmit() {

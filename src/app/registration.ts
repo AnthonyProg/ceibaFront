@@ -3,7 +3,7 @@ import { Vehicle } from './vehicle';
 export class Registration{
     domainId: bigint;
     domainVehiclePlate : string;
-    domainVehicleType: bigint;
+    domainVehicleType: Vehicle;
     checkIn : string;
     checkOut : string;
 }

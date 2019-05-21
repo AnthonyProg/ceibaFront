@@ -1,5 +1,5 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, logging, by } from 'protractor';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -10,7 +10,14 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to angular-client!');
+    expect(page.getTitleText()).toEqual('Parqueadero Ceiba');
+  });
+
+  it('Debe retornar los vehículos parqueados', () => {
+    browser.get('http://localhost:4200/parked');
+
+    browser.isElementPresent(by.id('parked'));
+
   });
 
   afterEach(async () => {

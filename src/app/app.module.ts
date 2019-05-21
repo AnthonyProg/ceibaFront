@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateRegistrationComponent } from './create-registration/create-registration.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ParkedListComponent } from './parked-list/parked-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreateRegistrationComponent
+    CreateRegistrationComponent,
+    ParkedListComponent    
   ],
   imports: [
     BrowserModule,

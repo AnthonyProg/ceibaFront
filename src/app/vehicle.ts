@@ -1,4 +1,4 @@
 export class Vehicle{
-    domainTypeId?:bigint;
+    domainTypeId:bigint;
     domainType:string;
 }

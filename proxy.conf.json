@@ -2,5 +2,9 @@
   "/registration": {
     "target": "http://localhost:8080/checkin",
     "secure": false
+  },
+  "/parked":{
+    "target": "http://localhost:8080/parked",
+    "secure": false
   }
 }

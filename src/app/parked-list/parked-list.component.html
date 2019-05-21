@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+      <table class="table table-striped table-bordered">
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Placa</th>
+                  <th>Entrada</th>
+                  <th>Salida</th>    
+                  <th>Tipo</th>               
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let registration of registrations | async">
+                  <td>{{registration.domainId}}</td>
+                  <td>{{registration.domainVehiclePlate}}</td>
+                  <td>{{registration.checkIn}}</td>
+                  <td>{{registration.checkOut}}</td>
+                  <td>{{registration.domainVehicleType.domainType}}</td>
+                  <td><button (click)="updateRegistration(registration)">Dar Salida</button></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+
+<div [hidden]="!submitted">
+    <h4>Total a Pagar: {{totalValue}}</h4>
+</div>
